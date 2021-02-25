@@ -7,7 +7,7 @@ import sys
 def get_smallest_prime_factor(n):
     for i in range(2, n):
         if (n % i) == 0:
-        return i
+            return i
     return None     
 
 
@@ -17,6 +17,7 @@ n = int(sys.argv[1])
 if n < 1:
     sys.exit(sys.argv[0] + ": Expecting a positive integer")
 
+smallest_prime_factor = get_smallest_prime_factor(n)
 
 if smallest_prime_factor is None:
     print(n)
